@@ -7,16 +7,17 @@ import * as React from "react";
 * This component is attached to the /about path in router.jsx
 */
 
-export default function Tutorial() {
+export default function Search() {
   /* DECLARE STYLE AND TRIGGER FOR WIGGLE EFFECT FROM TODO ON NEXT LINE */
   
   return (
     <div className="page">
       {/* REPLACE H1 ELEMENT BELOW WITH CODE FROM TODO */}
       <h1 className="title">
-        Tutorial
+        Search for Games!
       </h1>
-      <p>This page contains tutorials for creating your first game!</p>
+      <input placeholder="Search"></input>
+      <button>Search</button>
 
     </div>
   );

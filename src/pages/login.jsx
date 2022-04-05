@@ -6,6 +6,8 @@ signOut,
 signInWithEmailAndPassword,
 } from 'firebase/auth';
 import { auth } from '../firebase-config';
+//import '../styles/styles.css';
+import '../styles/login.css';
 
 
 export default function Login() {
@@ -51,18 +53,17 @@ export default function Login() {
   
   return (
     <div className="App">
-      <div>
-        <h2 className="title">Sign up or log in!</h2>
+      <div id = "main-holder">
+        <h2 className="title">Sign up!</h2>
         <h4> Register User </h4>
-        <input placeholder="Email..." onChange={(event) => {
+        <input class="login-form-field" placeholder="Email..." onChange={(event) => {
             setRegisterEmail(event.target.value);
           }}/>
-        <input placeholder="Password..." onChange={(event) => {
+        <input class="login-form-field" placeholder="Password..." onChange={(event) => {
           setRegisterPassword(event.target.value);
           }}/>
-        <button onClick={register}> Create User </button>
+        <button id="login-form-submit" onClick={register}> Create User </button>
       </div>
-      
       <div>
         <h4> Login </h4>
         <input placeholder="Email..." onChange={(event) => {
