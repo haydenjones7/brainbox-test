@@ -33,7 +33,9 @@ export default function Prompt({ socket, username, gameID }) {
       
       // this is the exact same as receive message so pls work
       console.log("RECEIVED AN ANSWER");
+      console.log(data);
       setAnswerList((list) => [...list, data]);
+      console.log(answerList);
     });
     
   }, [socket]);
@@ -59,6 +61,21 @@ export default function Prompt({ socket, username, gameID }) {
         
         <button onClick={sendPrompt}>&#9658;</button>
       </h2>
+      
+      {answerList.map((answerContent) => {
+            return (
+              <div
+                className="message"
+              >
+                <div>
+                  <div className="message-content">
+                      <p>{answerContent.answer}</p>
+                      <p>{answerContent.author}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
     </div>
   );
 }
