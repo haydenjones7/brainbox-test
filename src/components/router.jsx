@@ -3,7 +3,10 @@ import { Switch, Route, Router } from "wouter";
 import Home from "../pages/home";
 import About from "../pages/about";
 import Login from "../pages/login";
-import Tutorial from "../pages/tutorial";
+import Search from "../pages/search";
+import ChatApp from "../pages/chatapp";
+import GameTest from "../pages/gametest";
+import NewGame from "../pages/newgame";
 
 /**
 * The router is imported in app.jsx
@@ -18,6 +21,8 @@ export default () => (
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/login" component={Login} />
-    <Route path="/tutorial" component={Tutorial} />
+      <Route path="/search" component={Search} />
+      <Route path="/chatapp" component={ChatApp} />
+      <Route path="/newgame" component={NewGame} />
     </Switch>
 );

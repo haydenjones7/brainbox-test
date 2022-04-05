@@ -29,11 +29,6 @@ export default function About() {
           </strong>
         </em>
       </p>
-
-      <p>
-        Built with <a href="https://reactjs.org/">React</a> on{" "}
-        <a href="https://glitch.com/">Glitch</a>.
-      </p>
     </div>
   );
 }

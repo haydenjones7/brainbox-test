@@ -29,15 +29,7 @@ export default function Home() {
       </animated.div>
       <h1 className="title">BrainBox!</h1>
       {/* When the user hovers over the image we apply the wiggle style to it */}
-      <div className="instructions">
-        <h2>Using this project</h2>
-        <p>
-          This is the Glitch <strong>Hello React</strong> project. You can use
-          it to build your own app. See more info in the{" "}
-          <Link href="/about">About</Link> page, and check out README.md in the
-          editor for additional detail plus next steps you can take!
-        </p>
-      </div>
+
     </>
   );
 }

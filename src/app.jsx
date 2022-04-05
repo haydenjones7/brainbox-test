@@ -3,6 +3,7 @@ import { Router, Link } from "wouter";
 import { BrowserRouter as BRouter, Routes, Route }
   from 'react-router-dom';
 
+
 /**
 * This code defines the react app
 *
@@ -23,39 +24,45 @@ import useHashLocation from "./hooks/wouter-hash";
 // The component that adds our Meta tags to the page
 import Seo from './components/seo.jsx';
 
+// Icons
+import { BarsIcon, ReadMeIcon, SearchIcon, ToolboxIcon, SignInIcon } from "./styles/icons.jsx";
+
 // Home function that is reflected across the site
 export default function Home() {
   return (
     <Router hook={useHashLocation}>
       <Seo />
+      {/* Header links to Home and About, Link elements matched in router.jsx */}
+      <header className="header">
+        <div className="links">
+          <Link href="/">Home</Link>
+          <span className="divider">|</span>
+          <Link href="/about">About</Link>
+          <span className="divider">|</span>
+          <Link href="/login">Make Account</Link>
+          <span className="divider">|</span>
+          <Link href="/search">Search</Link>
+          <span className="divider">|</span>
+          <Link href="/chatapp">Chat</Link>
+          <span className="divider">|</span>
+          <Link href="/newgame">Game</Link>
+        </div>
+      </header>
       <main role="main" className="wrapper">
         <div className="content">
           {/* Router specifies which component to insert here as the main content */}
           <PageRouter />
         </div>
       </main>
-      {/* Footer links to Home and About, Link elements matched in router.jsx */}
       
-      {/* we could make this a header if we wanted */}
+      {/* Footer*/}
       <footer className="footer">
-        <div className="links">
-          <Link href="/">Home</Link>
-          <span className="divider">|</span>
-          <Link href="/about">About</Link>
-          <span className="divider">|</span>
-          <Link href="/login">Login/Signup</Link>
-          <span className="divider">|</span>
-          <Link href="/tutorial">Tutorial</Link>
-        </div>
-        <a
-          className="btn--remix"
-          target="_top"
-          href="https://glitch.com/edit/#!/remix/glitch-hello-react"
-        >
-          <img src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140" alt="" />
-          Remix on Glitch
-        </a>
+        <p>
+          Built with <a href="https://reactjs.org/">React</a> on{" "}
+          <a href="https://glitch.com/">Glitch</a>.
+        </p>
       </footer>
+      
     </Router>
   );
 }
